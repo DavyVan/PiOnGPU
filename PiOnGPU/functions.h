@@ -8,3 +8,8 @@ __device__ void DecToHexSingle(unsigned char dec, char * hex);
 
 //Decimal --> Hex in char, convert all digits in a array
 __device__ void DecToHexArray(unsigned char dec[], char hex[], int count);
+
+__device__ void DecToHexModDiv(unsigned char dec, char &hex);
+
+
+__device__ double _16dSj(__int64 d, int j);

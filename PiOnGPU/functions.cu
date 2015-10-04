@@ -1,4 +1,8 @@
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
+
 #include "functions.h"
+
 
 __device__ __int64 biexp(__int64 a, __int64 b, __int64 mod)
 {
@@ -25,4 +29,20 @@ __device__ void DecToHexArray(unsigned char dec[], char hex[], int count)
 {
 	for (int i = 0; i < count; i++)
 		DecToHexSingle(dec[i], &hex[2 * i]);
+}
+
+__device__ void DecToHexModDiv(unsigned char dec, char &hex)
+{
+	hex = hex_table[dec];
+}
+
+__device__ double _16dsj(__int64 d, int j)
+{
+	double sum = 0;
+	for (__int64 k = 0; k <= d; k++)
+	{
+		sum += (double) biexp(16, d - k, 8 * k + j) / (8 * k + j);
+	}
+
+	return sum - (int)sum;
 }

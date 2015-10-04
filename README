@@ -1,3 +1,4 @@
 PiOnGPU
-Compute Pi on GPU with CUDA
-It's underworking
+Compute Pi on GPU with CUDA using BBP algorithm.
+It now can complete the computing in a very slowly way, even slower than CPU.
+I'm puzzled but still learning the new way to optimize it.
