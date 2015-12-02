@@ -44,7 +44,6 @@ Warp Size:                                     32
 #######################################
 ## Test Result on nVIDIA GT940M
 #######################################
-<<<<<<< HEAD
 threads per blocak      1024            512             256
 No optimization:        6940.083887     6430.943848     6300.090039
 Constant memory only:   6938.662695     6429.580566     6330.754102
@@ -57,20 +56,7 @@ No optimization:        6353.020801     6304.920996
 Constant memory only:   6355.743457     6276.935156
 Shared memory only:     6300.069043     6278.295605
 Both memory enabled:    6357.507031     6329.923535
-=======
-threads per blocak		1024			512				256
-No optimization: 		  6940.083887		6430.943848		6300.090039
-Constant memory only:	6938.662695		6429.580566		6330.754102
-Shared memory only:		7187.065234		6897.159473		6290.993066
-Both memory enabled:	7000.014746		6537.461328		6380.222168
 
-(Cont.)
-threads per blocak		128				64
-No optimization: 		  6353.020801		6304.920996
-Constant memory only:	6355.743457		6276.935156
-Shared memory only:		6300.069043		6278.295605
-Both memory enabled:	6357.507031		6329.923535
->>>>>>> origin/master
 
 nVIDIA GTX750Ti
 TBD
