@@ -6,6 +6,7 @@ I'm puzzled but still learning the new way to optimize it.
 #######################################
 ## Software Environment
 #######################################
+Windows 10
 Visual Studio 2013 Ultimate, and run in Release configuration
 CUDA 7.5
 20000 hex digits precision
@@ -58,26 +59,51 @@ Shared memory only:     6300.069043     6278.295605
 Both memory enabled:    6357.507031     6329.923535
 
 
-nVIDIA GTX750Ti
-TBD
+#######################################
+## Hardware Environment 2
+#######################################
+Brand: HP 
+ChipSet: Intel H57
+CPU: Intel Core i5-760 2.80GHz
+DRAM: DDR3 1600+1333MHz 8+2GB
+
+#######################################
+## Information of nVIDIA GTX750Ti
+#######################################
 CUDA Driver Version / Runtime Version          7.5 / 7.5
- CUDA Capability Major/Minor version number:    5.0
-  Total amount of global memory:                 2048 MBytes (2147483648 bytes)
-  ( 5) Multiprocessors, (128) CUDA Cores/MP:     640 CUDA Cores
-  GPU Max Clock rate:                            1189 MHz (1.19 GHz)
-  Memory Clock rate:                             2700 Mhz
-  Memory Bus Width:                              128-bit
-  L2 Cache Size:                                 2097152 bytes
-  Total amount of constant memory:               65536 bytes
-  Total amount of shared memory per block:       49152 bytes
-  Total number of registers available per block: 65536
-  Max dimension size of a thread block (x,y,z):  (1024, 1024, 64)
-  Max dimension size of a grid size    (x,y,z):  (2147483647, 65535, 65535)
-  Concurrent copy and kernel execution:          Yes with 1 copy engine(s)
-  Run time limit on kernels:                     Yes
-  Integrated GPU sharing Host Memory:            No
-  CUDA Device Driver Mode (TCC or WDDM):         WDDM (Windows Display Driver Model)
-  Warp Size:                                     32
+CUDA Capability Major/Minor version number:    5.0
+Total amount of global memory:                 2048 MBytes (2147483648 bytes)
+( 5) Multiprocessors, (128) CUDA Cores/MP:     640 CUDA Cores
+GPU Max Clock rate:                            1189 MHz (1.19 GHz)
+Memory Clock rate:                             2700 Mhz
+Memory Bus Width:                              128-bit
+L2 Cache Size:                                 2097152 bytes
+Total amount of constant memory:               65536 bytes
+Total amount of shared memory per block:       49152 bytes
+Total number of registers available per block: 65536
+Max dimension size of a thread block (x,y,z):  (1024, 1024, 64)
+Max dimension size of a grid size    (x,y,z):  (2147483647, 65535, 65535)
+Concurrent copy and kernel execution:          Yes with 1 copy engine(s)
+Run time limit on kernels:                     Yes
+Integrated GPU sharing Host Memory:            No
+CUDA Device Driver Mode (TCC or WDDM):         WDDM (Windows Display Driver Model)
+Warp Size:                                     32  
+
+#######################################
+## Test Result on nVIDIA GTX750Ti
+#######################################
+threads per blocak      1024            512             256
+No optimization:        3745.776123     3260.284180     3200.490479
+Constant memory only:   3787.979980     3260.239746     3214.660400
+Shared memory only:     3832.115479     3278.210693     3205.545166
+Both memory enabled:    3830.820068     3293.498291     3182.395264
+
+(Cont.)
+threads per blocak      128             64
+No optimization:        3062.325928     3045.280273
+Constant memory only:   3063.468758     3045.000244
+Shared memory only:     3195.489746     3134.976807
+Both memory enabled:    3085.062988     3103.204834
 
 nVIDIA GTX980
 TBD
